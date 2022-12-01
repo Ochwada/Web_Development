@@ -67,34 +67,57 @@ body {
   overflow: auto;
   background-color: #fff;
   text-align: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  /* font-family: "Merriweather", serif;
+  font-family: 'Lora', serif;*/
+  font-family: "Open Sans", sans-serif;
+  color: rgb(40, 40, 40);
+  font-size: 1rem;
 }
-/*fonts*/
+/* ------------------------------------ */
+/* ----------fonts------------ */
 h1 {
   color: #fff;
-  font-size:3rem;
+  font-size: 3rem;
   font-family: "Sacramento", cursive;
 }
 h2 {
-  font-family: "Merriweather", serif;
-  font-size:2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2rem;
 }
 h3 {
-  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-family: "Lora", serif;
 }
+h4 {
+  font-size: 1.3rem;
+  font-family: "Lora", serif;
+}
+h5 {
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+}
+a{
+  color: rgb(40, 40, 40);;
+}
+a:hover{
+  color: #FF2F93;
+}
+
 div.top-container h1 {
   color: #ffabe1;
   text-align: center;
-  font-family: "Sacramento", cursive;
 }
-
+div.blog h4:hover{
+  color: #FF2F93
+}
 div.top-container p {
   color: #ffabe1;
-  text-align: justify;
-  margin:0 25%;
+  text-align: center;
+  margin: 0 25%;
   padding-bottom: 20px;
 }
-/*lines*/
+/* ------------------------------------ */
+/* ----------lines------------ */
 hr {
   border-style: none;
   border-width: 7px;
@@ -105,7 +128,8 @@ hr {
 hr:hover {
   border-color: #937dc2;
 }
-
+/* ------------------------------------ */
+/* ----------images------------ */
 img.profile {
   border-radius: 50%;
   border: 1px solid #ffabe1;
@@ -115,7 +139,19 @@ img.profile {
 img.profile:hover {
   transform: scaleX(-1);
 }
+img.logo {
+  width: 70%;
+}
 
+/* ----------blog images----- */
+.blog img {
+  width: 25%;
+  float: left;
+  margin-right: 15px;
+  border-radius: 5%;
+}
+
+/* ---------- Cloud - image------- */
 img.top-cloud {
   margin-bottom: 20px;
   position: absolute;
@@ -134,26 +170,30 @@ img.bottom-cloud:hover {
   transform: scaleX(-1);
   opacity: 1;
 }
-
+/* ----------------------------- */
 /* Id Selector */
 
 /* Class Selector */
+div.blog {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+div.top-container {
+  background-color: #000;
+  position: relative;
+  display: inline-block;
+}
 div.two-column-left {
   float: left;
   height: 100%;
   width: 25%;
-  border-right: 1px double #937DC2;
+  border-right: 1px double #937dc2;
 }
-
 
 div.two-column-right {
   position: relative;
   height: 100%;
   width: 65%;
   display: inline-block;
-}
-
-div.top-container {
-  background-color: #000;
-  position: relative;
 }
