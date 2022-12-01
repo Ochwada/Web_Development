@@ -1,8 +1,99 @@
-/* Selector */
-body {
-  background-color: #fff;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
+/* Selector */
+body {
+  overflow: auto;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+/*fonts*/
+h1 {
+  color: #fff;
+  font-family: "Sacramento", cursive;
+}
+h2 {
+  font-family: "Merriweather", serif;
+}
+h3 {
+  font-family: "Merriweather", serif;
+}
+div.top-container h1 {
+  font-size: 5vw;
+  color: #ffabe1;
+  text-align: center;
+  font-family: "Sacramento", cursive;
+}
+
+div.top-container p {
+  color: #ffabe1;
+  text-align: center;
+  margin: 5%;
+  padding-bottom: 20px;
+}
+/*lines*/
 hr {
   border-style: none;
   border-width: 7px;
@@ -14,22 +105,54 @@ hr:hover {
   border-color: #937dc2;
 }
 
-img {
+img.profile {
   border-radius: 50%;
   border: 1px solid #ffabe1;
   padding: 2px;
   width: 30%;
 }
-img:hover {
+img.profile:hover {
   transform: scaleX(-1);
+}
+
+img.top-cloud {
+  margin-bottom: 20px;
+  position: absolute;
+  opacity: 0.5;
+}
+img.top-cloud:hover {
+  transform: scaleX(-1);
+  opacity: 1;
+}
+img.bottom-cloud {
+  padding: 2px;
+  position: absolute;
+  opacity: 0.5;
+}
+img.bottom-cloud:hover {
+  transform: scaleX(-1);
+  opacity: 1;
 }
 
 /* Id Selector */
 
 /* Class Selector */
-div.profile {
-  background-color:#000;
+div.two-column-left {
+  float: left;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #000;
 }
-div.profile_body {
-  margin: 10%;
+
+
+div.two-column-right {
+  position: relative;
+  height: 100%;
+  width: 65%;
+  display: inline-block;
+}
+
+div.top-container {
+  background-color: #000;
+  position: relative;
 }
