@@ -1,0 +1,35 @@
+/* Selector */
+body {
+  background-color: #fff;
+}
+
+hr {
+  border-style: none;
+  border-width: 7px;
+  border-color: #ffe6f7;
+  border-top-style: dotted;
+  width: 10%;
+}
+hr:hover {
+  border-color: #937dc2;
+}
+
+img {
+  border-radius: 50%;
+  border: 1px solid #ffabe1;
+  padding: 2px;
+  width: 30%;
+}
+img:hover {
+  transform: scaleX(-1);
+}
+
+/* Id Selector */
+
+/* Class Selector */
+div.profile {
+  background-color:#000;
+}
+div.profile_body {
+  margin: 10%;
+}
