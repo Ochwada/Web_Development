@@ -68,10 +68,12 @@ body {
   background-color: #fff;
   text-align: center;
   /* font-family: "Merriweather", serif;
-  font-family: 'Lora', serif;*/
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Lora', serif;
+  font-family: "Open Sans", sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   color: rgb(40, 40, 40);
   font-size: 1rem;
+  line-height: 1.5;
 }
 /* ------------------------------------ */
 /* ----------fonts------------ */
@@ -83,6 +85,7 @@ h1 {
 h2 {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 2rem;
+  color: #FF2F93;
 }
 h3 {
   font-size: 1.5rem;
@@ -104,29 +107,32 @@ a:hover{
 }
 
 div.top-container h1 {
-  color: #ffabe1;
+  color: #FF2F93;;
   text-align: center;
 }
 div.blog h4:hover{
-  color: #FF2F93
+  color: #FF2F93;
 }
+
 div.top-container p {
-  color: #ffabe1;
+  /*color: #ffabe1;*/
   text-align: center;
   margin: 0 25%;
   padding-bottom: 20px;
 }
 /* ------------------------------------ */
 /* ----------lines------------ */
-hr {
-  border-style: none;
-  border-width: 7px;
-  border-color: #ffe6f7;
-  border-top-style: dotted;
+hr.divider {
+  border: none;Git fetch respository
+  border-top: 7px dotted #ffe6f7;
   width: 10%;
 }
-hr:hover {
+hr.divider:hover {
   border-color: #937dc2;
+}
+hr.top-part {
+  border-top: 1px dotted #ffe6f7;
+  width: 70%;
 }
 /* ------------------------------------ */
 /* ----------images------------ */
@@ -140,15 +146,22 @@ img.profile:hover {
   transform: scaleX(-1);
 }
 img.logo {
-  width: 70%;
+  width: 30%;
+  text-align: center;
 }
 
 /* ----------blog images----- */
 .blog img {
-  width: 25%;
-  float: left;
+  width: 15%;
   margin-right: 15px;
-  border-radius: 5%;
+  border-radius: 50%;
+
+}
+.blog-left img {
+  float: left;
+}
+.blog-right img {
+  float: right;
 }
 
 /* ---------- Cloud - image------- */
@@ -180,7 +193,7 @@ div.blog {
   margin-top: 20px;
 }
 div.top-container {
-  background-color: #000;
+  background-color: #fff;
   position: relative;
   display: inline-block;
 }
