@@ -15,19 +15,21 @@ hr.blog-div{
 }
 /* ------------------------------------- */
 /* Font */
+#container h1, h2{
+  color: #FF3092;
+  font-weight: bold;
+  text-align: center;
+}
+h5{
+  text-decoration: underline;
+ }
 #container h1{
     font-family: 'Sacramento', cursive;
-    color: #FF3092;
-    font-weight: bold;
-    text-align: center;
     font-size:48px;
 }
 
 #container h2{
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #FF3092;
-    font-weight: bold;
-    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif; 
     font-size:40px;
     text-decoration: overline underline;
     padding: auto;
@@ -82,7 +84,7 @@ hr.blog-div{
     float: right;
 
 }
-.nav-media{
+.nav-media, .myskills{
     margin-top: 50px;
 }
 /* ------------------------------------- */
@@ -121,3 +123,57 @@ font-family: 'Montserrat Alternates', sans-serif;
 font-family: 'Roboto Serif', serif;
 font-family: 'Sacramento', cursive;
 */
+/* ------------------------------------- */
+/* Skills*/
+.details{
+  width: 10 0%;
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bar{
+  position: relative;
+  border: 2px solid #ee97c0;
+  border-radius: 20px;
+
+}
+.bar div{
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #ee97c0;
+
+}
+#html-bar{
+  animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+  100%{
+      width: 90%;
+  }
+}
+#css-bar{
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+  100%{
+      width: 75%;
+  }
+}
+#javascript-bar{
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100%{
+      width: 72%;
+  }
+}
+#jQuery-bar{
+  animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+  100%{
+      width: 58%;
+  }
+} 
