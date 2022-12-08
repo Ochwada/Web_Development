@@ -3,16 +3,38 @@ alert('world');
 
 https://github.com/rwaldron/idiomatic.js/ */
 
-function test(){
+
+// Given the existing code below, can you write some code so that their values are switched around?
+
     var a = "3";
     var b = "8";
-}
-    var c = b;
+
+/* So that the variable a holds the value "8".
+
+And the variable b holds the value "3".
+
+When the code is run, it should output:
+
+a is 8
+
+b is 3
+
+Do NOT change any of the existing code.
+
+You are NOT allowed to type any numbers.
+
+You should NOT redeclare the variables a and b.*/
+
+  
+    var c = a;
     var a = b;
     var b = c;
-    
-    
+
+/* Hint: Use this code playground to run your code and see if it matches your expectations.
+
+Hint: The solution is just 3 lines of code. 
+ */
 
 
-    console.log('a is' + a);
-    console.log('b is' + b);
+console.log("a is " + a);
+console.log("b is " + b);
