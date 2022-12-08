@@ -4,6 +4,8 @@ alert('world');
 https://github.com/rwaldron/idiomatic.js/ */
 
 
+// ---------------New code line----------------------------
+// ----------------------------------------------------
 // Given the existing code below, can you write some code so that their values are switched around?
 
     var a = "3";
@@ -38,3 +40,33 @@ Hint: The solution is just 3 lines of code.
 
 console.log("a is " + a);
 console.log("b is " + b);
+// ---------------New code line ----------------------------
+// ------------------------------------------------------
+
+var message = "Hello";
+var myName = "Linda";
+
+console.log(message + " "+ myName);
+
+// ---------------New code line----------------------------
+// ---------------------Concatenation----------------------
+
+console.log( myName.length);
+
+var tweet = prompt("Compose a tweet:");
+var tweetCount = tweet.length;
+var maxCount = 100;
+var remCount = maxCount - tweet.length
+
+console.log("you have written " + tweetCount + " characters, remaining " + remCount + " characters")
+
+// ---------------New code line----------------------------
+// ---------------------Slice----------------------
+// Cut the tween to only 100 characters
+var tweet_under_100 = tweet.slice(0,100)
+console.log(tweet_under_100 + " ( Char: " + tweet_under_100.length + ")" )
+
+// console.log(tweet.slice(0,100) + " ( Char: " + tweet_under_100.length + ")" )
+
+// ---------------New code line----------------------------
+// ---------------------Slice----------------------
