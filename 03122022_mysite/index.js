@@ -69,4 +69,25 @@ console.log(tweet_under_100 + " ( Char: " + tweet_under_100.length + ")" )
 // console.log(tweet.slice(0,100) + " ( Char: " + tweet_under_100.length + ")" )
 
 // ---------------New code line----------------------------
-// ---------------------Slice----------------------
+// ---------------------toUpperCase----------------------
+
+var myName = "Linda"
+
+myName.toUpperCase();
+myName.toLowerCase();
+
+console.log("Hello " + myName)
+
+// ---------------New code line----------------------------
+// -------------------------------------------
+var userName = prompt("What is your name?");
+
+var firstChr = userName.slice(0,1);
+var firstChrUpper = firstChr.toUpperCase();
+
+var otherChr = userName.slice(1,userName.length);
+var otherChrLower = otherChr.toLowerCase();
+
+var finalname = firstChrUpper + otherChrLower;
+
+console.log("Hello " + finalname)
