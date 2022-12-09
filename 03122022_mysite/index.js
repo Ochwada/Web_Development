@@ -29,8 +29,8 @@ You should NOT redeclare the variables a and b.*/
 
   
     var c = a;
-    var a = b;
-    var b = c;
+        a = b;
+        b = c;
 
 /* Hint: Use this code playground to run your code and see if it matches your expectations.
 
@@ -91,3 +91,21 @@ var otherChrLower = otherChr.toLowerCase();
 var finalname = firstChrUpper + otherChrLower;
 
 console.log("Hello " + finalname)
+
+// ---------------New code line----------------------------
+// -------------Basic Algorithm-----------------------------
+
+var myName_input  = prompt("What's your name?");
+var myName_1 = myName_input.slice(0,1).toUpperCase();
+var myName_rest = myName_input.slice(1, myName_input.length).toLowerCase();
+var myName = myName_1 + myName_rest;
+
+
+var greetings = console.log("Hello " + myName);
+
+var dogAge = prompt("What is your dog's age?");
+
+var humanAge = console.log(myName + ", Your dog is " +(((dogAge - 2) * 4) + 21) + " in human Age");
+
+// ---------------New code line----------------------------
+// -------------Increment and Decrement-----------------------------
