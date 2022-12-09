@@ -116,3 +116,36 @@ function isLeap(year) {
 console.log(isLeap())
 
 // ---------------------Array  ---------
+// -------------------------------------
+
+// store collection of related data
+function guestlist_check(guestname) {
+    var guestname = prompt("what is your name ?")
+    var guestlist = ["ochwada","button","input","textarea","select","details","linda"];
+
+    if (guestlist.includes(guestname)) {
+        console.log("welcome, to our event")
+    } else {
+        console.log("maybe next time")
+    }
+}
+
+guestlist_check()
+
+// ---------------------Array  ---------
+// ---------------------buzz-Fizzbuzz--
+// Buzz quiz
+var output = [];
+var count = 1;
+
+function fizzBuzz() {    
+    if (count % 3 === 0) {
+        output.push("Fizz");
+    } else {
+        output.push(count);
+    }
+
+count++;
+
+    console.log(output);
+}
