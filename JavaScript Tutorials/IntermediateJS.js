@@ -194,3 +194,34 @@ console.log(whosPaying());
 
 // ---------------------Loops  ---------
 // ---------------------Control Statements: While Loop--
+
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottles";
+    } 
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+    numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
+
+// --------------------for loop--
+for (let i = 0; i < 100; i++) {
+    console.log(i);
+}
+
+// --------------------The Fibonacci sequence--
+
+function fib(n) {
+    if (n <= 1) {
+        return n 
+    }else{
+         return fib(n-1) + fib(n-2);
+    }
+}
+
+
+fib(10)
