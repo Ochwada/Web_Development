@@ -56,7 +56,7 @@ h5 {
   }
 
   footer p{
-    /* position: absolute; */
+    position: absolute; 
     bottom: 0;
     left:50%;
 
@@ -77,6 +77,9 @@ h5 {
     font-size: 20px;
     padding: 5px 20px 5px 20px;
     text-decoration: none;
+    position: absolute; 
+    bottom: 10%;
+    
   }
   
   .btn:hover {
