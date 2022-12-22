@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,43 +8,41 @@
 
     <!-- css styling  -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-
-<!-- ------ title page ------ -->
-    <div id="titlePage">
-        <div class=title">
-            <img src="images/flag.png" alt="" />
-        </div>
-        <div class="title">
-            <h1>Refresh me</h1>
-        </div>
-    </div>
- <!-- ------  -------- -->
-<!-- ------ player part------ -->
-    <div id="dice"> 
-        <div id="left-dice"> 
-            <h5> Player 1</h5>
-            <!-- <div class="square"></div> -->
-            <img class="square" src="images/dice6.png" alt="" />
+      <!-- ------ title page ------ -->
+      <div class="title">
+        <h1>Refresh me</h1>
+      </div>
+      <!-- ------  -------- -->
+      <!-- ------ player part------ -->
+      <div id="dice">
+        <div id="left-dice">
+          <h5>Player 1</h5>
+          <!-- <div class="square"></div> -->
+          <img class="square" src="images/dice6.png" alt="" />
         </div>
 
-        <div id="right-dice"> 
-            <h5> Player 2</h5>
-            <img class="square" src="images/dice6.png" alt="" />
-            <!-- <div class="square"></div> -->
+        <div id="right-dice">
+          <h5>Player 2</h5>
+          <img class="square" src="images/dice6.png" alt="" />
+          <!-- <div class="square"></div> -->
         </div>
-        <button class="btn" onclick="chooseDice()"> Shuffle </button>
+        <button class="btn">Shuffle</button>
+      </div>
+      <!-- ------ player part------ -->
     </div>
-    <!-- ------ player part------ -->
-   
-</div>
     <script src="main.js"></script>
-</body>
-<footer> 
-    <p> by @ochwada </p>
-</footer>
+  </body>
+  <footer>
+    <p>by @ochwada</p>
+  </footer>
 </html>
