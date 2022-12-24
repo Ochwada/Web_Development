@@ -9,12 +9,14 @@ for (var i = 0; i < noOfDrumButtons; i++) {
         //switchStatements
         var buttonInnerHTML = this.innerHTML;
         makeSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
 
     });
 };
 // ----- Detect which Key was pressed and send it to makeSound())
 document.addEventListener("keypress", function (event) {
     makeSound(event.key);
+    buttonAnimation(event.key);
 
 });
 
@@ -61,6 +63,18 @@ function makeSound(key) {
             break;
     }
 };
+
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("."+currentKey);
+   
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+     }, 100);
+};
+
+// How to add css styling in js? 
+
 // USE Keydown instead of keypress
 /* function audioPlay(fileLocation) {
     this.fileLocation = fileLocation;
