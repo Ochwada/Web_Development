@@ -1,0 +1,5 @@
+Notes on Node.js
+
+--> Using the comnabd lines
+1. pwd  - see where you are in (directory)
+2. mkdir - make a new directory
