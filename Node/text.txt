@@ -12,3 +12,11 @@ Native Node Modules
 
 
 #NPM (Node Package Management)
+
+--> example look at npmjs.com for a package called superheros
+
+
+npm init 
+
+
+Creating server using Node js with Express 
