@@ -38,6 +38,48 @@ $("h1").on("mouseover", function () {
     $("h1").css("color", "hotpink")
 })
 
+$("h1").before("<button> Before Button </button>")
+
+$("h1").after("<button> After Button </button>")
+
+$("h1").prepend("<button> Prepend Button</button>")
+
+$("h1").append("<button> Append Button </button>")
 
 
+/* $("button").remove(); --> remove all buttons
+$("h1 button").remove();
 
+ $("button").click(function () {
+    $("h1").hide()
+}); 
+
+ $("button").on("click", function () {
+    $("h1").hide();
+});
+
+$("button").on("click", function () {
+    $("h1").toggle();
+});
+
+
+$("button").on("click", function () {
+    $("h1").fadeToggle();
+});
+
+
+$("button").on("click", function () {
+    $("h1").slideToggle();
+});
+
+$("button").on("click", function () {
+    $("h1").animate(
+        {opacity:0.5}
+    );
+});
+ */
+$("button").on("click", function () {
+    $("h1").slideUp().slideDown().animate(
+        { opacity: 0.5 }
+    );
+});
