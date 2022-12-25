@@ -14,6 +14,8 @@ let started = false;
 
 //2. Create a new variable called level and start at level 0.
 let level = 0;
+
+
 /* ----------------------New FUNCTION--------------------------- */
 /* ------------------------------------------------------------- */
 /*  detect when a keyboard key has been pressed, when that happens for the first 
@@ -27,23 +29,28 @@ $(document).keydown(function () {
     }
     
 });
+
+
 /* ----------------------New FUNCTION--------------------------- */
 /* ------------------------------------------------------------- */
 
 /*  detect when any of the buttons are clicked and trigger a handler function.*/
 $(".btn").on("click", function () {
 
-    /* In  the handler, create a new variable called userChosenColor to store the 
-    id of the button that got clicked.*/
+    // In  the handler, create a new variable called userChosenColor to store the
+    //id of the button that got clicked.*/
 
     let userChosenColor = $(this).attr("id");
-    /* Add the contents of the variable userChosenColor created*/
+    // Add the contents of the variable userChosenColor created*/
 
     userClickedPattern.push(userChosenColor);
 
     //1. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played.
     playSound(userChosenColor);
     animetePress(userChosenColor);
+
+    //2. Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
+    checkAnswer(userClickedPattern.length - 1);
 
 });
 
@@ -79,8 +86,10 @@ function animetePress(currentColor) {
 called randomNumber */
 function nextSequence() {
 
+    // Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level.
+    userClickedPattern = [];
 
-    //4. Inside nextSequence(), increase the level by 1 every time nextSequence() is called.
+    // Inside nextSequence(), increase the level by 1 every time nextSequence() is called.
     level++;
 
     //5. Inside nextSequence(), update the h1 with this change in the value of level.
@@ -102,3 +111,29 @@ function nextSequence() {
 
 };
 
+/* ----------------------New FUNCTION--------------------------- */
+/* ------------------------------------------------------------- */
+/* . Create a new function called checkAnswer(), it should take one
+input with the name currentLevel */
+
+function checkAnswer(currentLevel) {
+    //3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same 
+    //as the game pattern. If so then log "success", otherwise log "wrong".
+
+    if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
+        console.log("success");
+        
+    //4. If the user got the most recent answer right in step 3, then check that they have finished 
+    //their sequence with another if statement.
+
+        if(userClickedPattern.length === gamePattern.length){
+            //5. Call nextSequence() after a 1000 millisecond delay.
+
+            setTimeout(function () {
+                nextSequence();
+            }, 1000);
+        }
+    }else{
+        console.log("wrong")
+    }
+};
