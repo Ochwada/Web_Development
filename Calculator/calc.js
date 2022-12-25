@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/bmiCalc', (req, res) => {
+    res.sendFile(__dirname + '/bmiCalc.html')
+});
+
 
 
 app.post('/', (req, res) => {
@@ -21,11 +25,18 @@ app.post('/', (req, res) => {
 
     var num1 = Number(req.body.num1);
     var num2 = Number(req.body.num2);
-
     var result = num1 + num2;
     res.send("The result of the Calculation is: " + result);
 })
 
+app.post('/bmiCalc', (req, res) => {
+
+    var weight = parseFloat(req.body.weight);
+    var height = parseFloat(req.body.height);
+
+    var bmiValue = weight / (height) ** 2;
+    res.send("Your BMI is : " + bmiValue);
+})
 // ----------End Pages ----------------->
 
 app.listen(3000, function () {
