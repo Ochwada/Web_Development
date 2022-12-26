@@ -12,6 +12,23 @@ app.get('/', (req, res) => {
     
     https.get(urlLink, (response) => {
         console.log(response.statusCode);
+
+        response.on('data', (data) => {
+            // convert the data to JSON
+
+            const weatherData = JSON.parse(data)
+            // console.log(WeatherData);
+
+           /*  const objectMe = {
+                name: "Ochwada",
+                favoriteFood: "Ugali"
+            }
+            console.log(JSON.stringify(objectMe)) */
+
+            const temp = (weatherData.main.temp - 273.15)
+
+            console.log("Its now " + temp + "° in " + weatherData.name );
+        });
     });
 
     res.send("Server is up and running")
