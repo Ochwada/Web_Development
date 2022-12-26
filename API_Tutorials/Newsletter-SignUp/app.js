@@ -31,21 +31,29 @@ app.post('/', (req, res) => {
         members: [{
             email_address: email,
             status: "subscribed",
-            merge_fields:{
+            merge_fields: {
                 FNAME: firstName,
                 LNAME: lastName
             }
         }]
     };
-    
-    const jsonData = JSON.stringify(data);
-    const url = "https://us21.api.mailchimp.com/3.0/lists/b49332d0d4"
 
+    const jsonData = JSON.stringify(data);
+    const url = "https://us21.api.mailchimp.com/3.0/lists/b49332d0d4"; // added ID AND X part
+    const options = {
+        method: "POST",
+        auth: "ochwada:4624d75cc4ff906cc7a23ff45918d926-us21"
+    }
 
     // make request (with https module)
-    https.request(url, options, (res) => {
-
+    const requestX = https.request(url, options, (res) => {
+        res.on("data", (data) => {
+            console.log(JSON.parse(data));
+        })
     })
+
+    requestX.write(jsonData);
+    requestX.end();
     //console.log(firstName, lastName, email)
 });
 
