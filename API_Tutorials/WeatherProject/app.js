@@ -46,7 +46,13 @@ app.post('/', (req, res) => {
             res.send();          //console.log(descOfData);
         });
     });
-});
+});/* app.use(bodyParser.urlencoded({
+    extended: true
+}));
+ */
+/* app.post("/", (req, res) => {
+    res.send("Hey am working");
+}); */
     /* ---------------             ---------------*/
 
     app.listen(3000, function () {
