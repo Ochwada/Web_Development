@@ -7,7 +7,8 @@ const https = require("node:https");
 
 const app = express();
 
-app.use(express.static("/public/")); // read the public folder the css and images are, *** added the line for vercel
+app.use(express.static(__dirname + "/public/")); // read the public folder the css and images are, *** added the line for vercel
+//app.use(express.static("public")); 
 
 app.use(bodyParser.urlencoded({
     extended: true
