@@ -1,0 +1,10 @@
+{
+   "version": 2,
+   "name": "to Do list",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
+   ]
+}
