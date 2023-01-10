@@ -9,12 +9,25 @@
 </head>
 
 <body>
-    <% if (kindOfDay==="Sunday" || kindOfDay==="Saturday" ) {%>
+    <h1> Today is: <%= kindOfDay %>
+    </h1>
+    <ul>
+        <li>Read Emails </li>
+        <li>Make calls </li>
+        <li>Check on Tasks</li>
+        <li> <%= newListItem%></li>
+    </ul>
+    <form class="" action="/" method="post">
+        <input type="text" placeholder="New To Do" name="newItem">
+        <button type="submit" type="button">Add</button>
+    </form>
+
+    <!-- <% if (kindOfDay ==="Sunday" || kindOfDay==="Saturday" ) {%>
         <h1 style="color: #ffe5f1">It's a <%= kindOfDay %> List</h1>
         <% }else{ %>
-            <h1 style="color: #ada2ff">It's a <%= kindOfDay %> List</h1>
+            <h1 style="color: #260ce9">It's a <%= kindOfDay %> List</h1>
 
-            <%}%>
+            <%}%> -->
 </body>
 
 </html>
