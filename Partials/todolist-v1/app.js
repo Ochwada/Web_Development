@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 // --- Variables --- 
 
-var item = ""
+var items = [];
 // --------------------
 
 
@@ -75,7 +75,7 @@ app.get('/', (req, res) => {
 
     res.render("list", {
         kindOfDay: day,
-        newListItem: item
+        newListItems: items,
     });
     //res.render("list", { kindOfDay: day }) // "list" is an ejs file from view directory
 
@@ -84,7 +84,11 @@ app.get('/', (req, res) => {
 
 // --- Post request to add a TO DO ----------->
 app.post("/", (req, res) => {
-    item = req.body.newItem
+
+    var item = req.body.newItem;
+
+    items.push(item);
+
     //console.log(item)
     res.redirect("/")
 
