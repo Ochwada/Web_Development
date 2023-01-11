@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "newsletter - app",
+    "name": "todolist - app",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
