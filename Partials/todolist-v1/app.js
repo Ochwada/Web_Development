@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(express.static("public"))
 // --- Variables --- 
 
@@ -103,11 +104,11 @@ app.post("/", (req, res) => {
 
 // PORT
 // http://localhost:3000/
-/* const port = 3000;
+const port = 3000;
 
 app.listen(port, () =>
-    console.log('Server started on port ' + port)); */
+    console.log('Server started on port ' + port)); 
 
-app.listen(process.env.PORT, function () {
+/* app.listen(process.env.PORT, function () {
     console.log("Server running on Port (pre assigned)")
-}); 
+});  */
